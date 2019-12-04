@@ -54,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("File",MODE_PRIVATE);
         //저장을 하기위해 editor를 이용하여 값을 저장시켜준다.
         SharedPreferences.Editor editor = sharedPreferences.edit();
+
+        //체크 박스에 체크가 됬다면 아이디를 저장한다.
         if(checkBox.isChecked()) {
             String text1 = editText1.getText().toString();
             editor.putString("text1", text1);
